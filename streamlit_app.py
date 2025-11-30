@@ -1,11 +1,6 @@
 import streamlit as st
 import pandas as pd
 import pickle
-
-# -----------------------------
-# Load the saved KMeans model
-# -----------------------------
-@st.cache_resource
 def load_model():
     with open("kmeans_wine_quality_k3.pkl", "rb") as f:
         model = pickle.load(f)
