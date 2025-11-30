@@ -7,24 +7,15 @@ def load_model():
     return model
 
 kmeans = load_model()
-
-# -----------------------------
-# Group descriptions
-# -----------------------------
 cluster_descriptions = {
     0: "Cluster 0 wines generally have **lower acidity** and **moderate alcohol**. They tend to be smoother and lighter.",
     1: "Cluster 1 wines usually show **high acidity**, **high sulphates**, and **strong flavor intensity**.",
     2: "Cluster 2 wines are typically **sweeter**, **higher alcohol**, and usually have **better quality ratings**."
 }
-
-# -----------------------------
-# Streamlit UI
-# -----------------------------
 st.title("🍷 Wine Cluster Classifier (KMeans k=3)")
 
 st.write("Upload wine data or enter values manually to see which group it belongs to.")
 
-# Data upload
 uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"])
 
 if uploaded_file:
