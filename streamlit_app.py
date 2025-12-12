@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 def load_model():
-    with open("kmeans_wine_quality_k3.pkl", "rb") as f:
+    with open("kmeans_wine_quality.pkl", "rb") as f:
         model = pickle.load(f)
     return model
 
